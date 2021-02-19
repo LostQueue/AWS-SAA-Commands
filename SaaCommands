@@ -1,0 +1,23 @@
+sudo su        //Elevates Rights on machine//
+
+yum update -y    //Forces Machine to update itself//
+
+yum install -y httpd.x86_64    //install http service//
+
+systemctl start httpd.service   //Starts http Service//
+
+systemctl enable httpd.service    //To ensure service remains across reboots//
+
+curl localhost:80    //Means "Load" whatever is in the "URL"//
+
+    //Remeber when theres a timeout issue its most likely a security group issue//
+
+echo "Hello World" > /var/www/index.html   //Whatever Apache page says for file location//
+
+echo "Hello World from $(hostname -f)" > /var/www/index.html   //inserts hostname//
+
+    //Bootstrapping means launching commands when a machine starts. only run once at instance start//
+       //Automate(Updates, Software, Common files from int, anything you casn think of)//
+           //#install httpd (Linux 2 version)// Is how you get base64 encoded
+ 
+ 
